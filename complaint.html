@@ -266,7 +266,7 @@ const db= getDatabase();
     ) {
         alert("Please fill in all the required fields.");
         return; 
-
+       }
     console.log("fname.value:", fname.value);
 
         set (ref(db,'complaints/' + fname.value),{
@@ -278,16 +278,13 @@ const db= getDatabase();
             console.log('Data Added Successfully:', data);
         }).catch((error)=>{
             const errorMessage = error.message;
-            alert("Unsuccessful");
+            // alert("Unsuccessful");
             console.error('Error Adding Data:', error.message); 
             console.log(error);
         })
-    }
 
+    }
     submit.addEventListener('click', AddData);
-
-    }
-    console.log(app);
 </script>
 </body>
 
